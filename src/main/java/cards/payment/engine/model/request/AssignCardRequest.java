@@ -2,7 +2,7 @@ package cards.payment.engine.model.request;
 
 public class AssignCardRequest {
     private String country;
-    private String status;
+    private Integer status;
     private Integer ownerId;
 
     public String getCountry() {
@@ -13,11 +13,11 @@ public class AssignCardRequest {
         this.country = country;
     }
 
-    public String getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 

@@ -10,16 +10,18 @@ public class CardEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String country;
-    private String status;
+    private Integer status;
+    @Column(unique=true)
     private Integer ownerId;
-    private Integer number;
+    @Column(unique=true)
+    private Long number;
     private Integer cvv;
     private Integer pin;
 
     public CardEntity() {
     }
 
-    public CardEntity(String country, String status, Integer ownerId) {
+    public CardEntity(String country, Integer status, Integer ownerId) {
         this.country = country;
         this.status = status;
         this.ownerId = ownerId;
@@ -41,11 +43,11 @@ public class CardEntity {
         this.country = country;
     }
 
-    public String getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
@@ -57,11 +59,11 @@ public class CardEntity {
         this.ownerId = ownerId;
     }
 
-    public Integer getNumber() {
+    public Long getNumber() {
         return number;
     }
 
-    public void setNumber(Integer number) {
+    public void setNumber(Long number) {
         this.number = number;
     }
 
