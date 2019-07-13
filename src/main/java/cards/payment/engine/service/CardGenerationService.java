@@ -2,6 +2,7 @@ package cards.payment.engine.service;
 
 import cards.payment.engine.model.entity.CardEntity;
 import cards.payment.engine.model.request.AssignCardRequest;
+import cards.payment.engine.model.response.CardGenerationResponse;
 import cards.payment.engine.repository.CardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.security.SecureRandom;
 
 @Service
-public class CardService {
+public class CardGenerationService {
 
     private static final Long MAX_NUMBER_ALLOWED = 10000000000000000L;
     private static final Integer MAX_CVV_ALLOWED = 1000;
@@ -20,7 +21,7 @@ public class CardService {
     @Autowired
     private CardRepository cardRepository;
 
-    public CardEntity generateCard(AssignCardRequest request){
+    public CardGenerationResponse generateCard(AssignCardRequest request) {
         CardEntity card = new CardEntity();
         card.setCountry(request.getCountry());
         card.setOwnerId(request.getOwnerId());
@@ -29,12 +30,15 @@ public class CardService {
         card.setCvv(generateCVV());
         card.setPin(generatePin());
 
-        cardRepository.save(card);
+        card = cardRepository.save(card);
 
-        return card;
+        return generationResponse(card);
     }
 
 
+    private CardGenerationResponse generationResponse(CardEntity card) {
+        return new CardGenerationResponse(card.getNumber(), card.getCvv(), card.getPin());
+    }
 
     private Integer generatePin() {
         return secureRandom.nextInt(STANDARD_PIN);

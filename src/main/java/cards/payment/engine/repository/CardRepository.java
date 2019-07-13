@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CardRepository extends JpaRepository<CardEntity,Integer> {
 
+    CardEntity findByOwnerIdAndNumber(Integer ownerId, Long Number);
 }
