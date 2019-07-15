@@ -1,6 +1,6 @@
-package cards.payment.engine.repository;
+package cards.management.repository;
 
-import cards.payment.engine.model.entity.CardEntity;
+import cards.management.model.entity.CardEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

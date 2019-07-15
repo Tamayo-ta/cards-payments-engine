@@ -1,10 +1,20 @@
-package cards.payment.engine.model.request;
+package cards.management.model.request;
 
 public class PinChangeRequest {
     private Integer oldPin;
     private Integer ownerId;
     private Integer newPin;
     private Long number;
+
+    public PinChangeRequest(Integer oldPin, Integer ownerId, Integer newPin, Long number) {
+        this.oldPin = oldPin;
+        this.ownerId = ownerId;
+        this.newPin = newPin;
+        this.number = number;
+    }
+
+    public PinChangeRequest() {
+    }
 
     public Long getNumber() {
         return number;

@@ -1,4 +1,4 @@
-package cards.payment.engine.config;
+package cards.management.config;
 
 import com.google.common.base.Predicates;
 import org.springframework.context.annotation.Bean;

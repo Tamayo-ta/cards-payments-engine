@@ -1,4 +1,4 @@
-package cards.payment.engine;
+package cards.management;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

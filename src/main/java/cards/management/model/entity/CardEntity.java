@@ -1,4 +1,4 @@
-package cards.payment.engine.model.entity;
+package cards.management.model.entity;
 
 import javax.persistence.*;
 

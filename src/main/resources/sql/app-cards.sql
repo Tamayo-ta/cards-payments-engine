@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Jul 11, 2019 at 08:17 PM
+-- Generation Time: Jul 14, 2019 at 07:55 AM
 -- Server version: 8.0.15
 -- PHP Version: 7.2.14
 
@@ -43,7 +43,8 @@ CREATE TABLE `Card` (
 --
 
 INSERT INTO `Card` (`Id`, `Country`, `Status`, `OwnerId`, `Number`, `Cvv`, `Pin`) VALUES
-(1, 'ES', 1, 1, 2000909709703266, 161, 2343);
+(1, 'ES', 1, 1, 2000909709703266, 161, 1411),
+(2, 'GB', 1, 2, 9293680621983676, 350, 7975);
 
 --
 -- Indexes for dumped tables
@@ -65,7 +66,7 @@ ALTER TABLE `Card`
 -- AUTO_INCREMENT for table `Card`
 --
 ALTER TABLE `Card`
-  MODIFY `Id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

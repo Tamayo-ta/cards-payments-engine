@@ -1,4 +1,4 @@
-package cards.payment.engine.model.response;
+package cards.management.model.response;
 
 public class PinResponse {
     private Integer code;
@@ -7,6 +7,9 @@ public class PinResponse {
     public PinResponse(Integer code, Integer tryNumber) {
         this.code = code;
         this.tryNumber = tryNumber;
+    }
+
+    public PinResponse() {
     }
 
     public Integer getCode() {

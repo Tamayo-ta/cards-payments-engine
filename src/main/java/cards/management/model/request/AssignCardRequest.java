@@ -1,9 +1,18 @@
-package cards.payment.engine.model.request;
+package cards.management.model.request;
 
 public class AssignCardRequest {
     private String country;
     private Integer status;
     private Integer ownerId;
+
+    public AssignCardRequest(String country, Integer status, Integer ownerId) {
+        this.country = country;
+        this.status = status;
+        this.ownerId = ownerId;
+    }
+
+    public AssignCardRequest() {
+    }
 
     public String getCountry() {
         return country;

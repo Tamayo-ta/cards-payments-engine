@@ -1,8 +1,8 @@
-package cards.payment.engine.controller;
+package cards.management.controller;
 
-import cards.payment.engine.model.request.PinChangeRequest;
-import cards.payment.engine.model.response.PinResponse;
-import cards.payment.engine.service.PinService;
+import cards.management.service.PinService;
+import cards.management.model.request.PinChangeRequest;
+import cards.management.model.response.PinResponse;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

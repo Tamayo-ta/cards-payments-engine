@@ -1,8 +1,8 @@
-package cards.payment.engine.controller;
+package cards.management.controller;
 
-import cards.payment.engine.model.request.AssignCardRequest;
-import cards.payment.engine.model.response.CardGenerationResponse;
-import cards.payment.engine.service.CardGenerationService;
+import cards.management.model.request.AssignCardRequest;
+import cards.management.model.response.CardGenerationResponse;
+import cards.management.service.CardGenerationService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

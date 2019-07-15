@@ -1,9 +1,9 @@
-package cards.payment.engine.service;
+package cards.management.service;
 
-import cards.payment.engine.model.entity.CardEntity;
-import cards.payment.engine.model.request.PinChangeRequest;
-import cards.payment.engine.model.response.PinResponse;
-import cards.payment.engine.repository.CardRepository;
+import cards.management.model.entity.CardEntity;
+import cards.management.model.request.PinChangeRequest;
+import cards.management.model.response.PinResponse;
+import cards.management.repository.CardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

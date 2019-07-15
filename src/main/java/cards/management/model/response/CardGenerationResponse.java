@@ -1,4 +1,4 @@
-package cards.payment.engine.model.response;
+package cards.management.model.response;
 
 public class CardGenerationResponse {
     private Long number;
@@ -9,6 +9,9 @@ public class CardGenerationResponse {
         this.number = number;
         this.cvv = cvv;
         this.pin = pin;
+    }
+
+    public CardGenerationResponse() {
     }
 
     public Long getNumber() {
