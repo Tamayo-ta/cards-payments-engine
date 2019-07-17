@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Jul 14, 2019 at 07:55 AM
+-- Generation Time: Jul 17, 2019 at 08:17 PM
 -- Server version: 8.0.15
 -- PHP Version: 7.2.14
 
@@ -46,6 +46,30 @@ INSERT INTO `Card` (`Id`, `Country`, `Status`, `OwnerId`, `Number`, `Cvv`, `Pin`
 (1, 'ES', 1, 1, 2000909709703266, 161, 1411),
 (2, 'GB', 1, 2, 9293680621983676, 350, 7975);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `CardStatus`
+--
+
+CREATE TABLE `CardStatus` (
+  `id` int(11) NOT NULL,
+  `description` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `CardStatus`
+--
+
+INSERT INTO `CardStatus` (`id`, `description`) VALUES
+(-3, 'Defective'),
+(-2, 'Lost'),
+(-1, 'Stolen'),
+(0, 'Disabled'),
+(1, 'Enabled'),
+(2, 'Fraud checking'),
+(3, 'Expired');
+
 --
 -- Indexes for dumped tables
 --
@@ -57,6 +81,12 @@ ALTER TABLE `Card`
   ADD PRIMARY KEY (`Id`),
   ADD UNIQUE KEY `Number` (`Number`),
   ADD UNIQUE KEY `OwnerId_2` (`OwnerId`);
+
+--
+-- Indexes for table `CardStatus`
+--
+ALTER TABLE `CardStatus`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
